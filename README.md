@@ -1,2 +1,2 @@
-# fishbone
+# Fishbone
 Experimental Backend for FishApp
