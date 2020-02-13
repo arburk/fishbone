@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fishbone-server-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: fishbone-server
+  template:
+    metadata:
+      labels:
+        run: fishbone-server
+    spec:
+      containers:
+        - name: fishbone-server
+          image: arburk/fishbone:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              hostPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fishbone-rest-service
+  namespace: default
+  labels:
+    run: fishbone-server
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30080
+      protocol: TCP
+  selector:
+    run: fishbone-server
