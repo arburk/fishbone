@@ -1,4 +1,4 @@
-package org.arburk.fishbone.model;
+package org.arburk.fishbone.domain;
 
 import lombok.*;
 
