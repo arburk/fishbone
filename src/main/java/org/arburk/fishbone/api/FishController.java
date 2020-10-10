@@ -12,9 +12,15 @@ import java.util.List;
 @RequestMapping("fish")
 public class FishController {
 
+  private final FishRepository fishRepo;
+
+  public FishController(FishRepository fishRepo) {
+    this.fishRepo = fishRepo;
+  }
+
   @GetMapping("/list")
   public List<Fish> getFishes() {
-    return FishRepository.getAllFish();
+    return fishRepo.getAllFish();
   }
 
 }

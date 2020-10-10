@@ -27,7 +27,7 @@ class FishControllerTest {
 
     @Test
     void getFishHappyCase() throws Exception {
-        String testResult = "[{\"id\":0,\"names\":null,\"description\":null}]";
+        String testResult = "[{\"id\":0,\"names\":null,\"description\":null,\"createdOn\":\"2020-10-10\"}]";
         mvc.perform(MockMvcRequestBuilders.get("/fish/list").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo(testResult)));
