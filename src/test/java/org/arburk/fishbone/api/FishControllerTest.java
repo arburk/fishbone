@@ -8,6 +8,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.time.LocalDate;
+
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -27,7 +29,7 @@ class FishControllerTest {
 
     @Test
     void getFishHappyCase() throws Exception {
-        String testResult = "[{\"id\":0,\"names\":null,\"description\":null,\"createdOn\":\"2020-10-10\"}]";
+        String testResult = "[{\"id\":0,\"names\":null,\"description\":null,\"createdOn\":\""+LocalDate.now()+"\"}]";
         mvc.perform(MockMvcRequestBuilders.get("/fish/list").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo(testResult)));
