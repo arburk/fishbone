@@ -30,10 +30,8 @@ public class Fish {
    * Test for codeQL to verify if the UseBraces.ql identifies the missing braces
    */
   public void generateRandomDescription() {
-    if(description == null)
-    description = new RandomString(20).nextString();
-    else
-    System.out.println("do not change current description");
+    if(description == null)  description = new RandomString(20).nextString();
+    else System.out.println("do not change current description");
   }
 
 }
