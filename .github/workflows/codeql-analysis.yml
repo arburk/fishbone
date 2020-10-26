@@ -5,7 +5,7 @@ on:
   #    branches: [master, ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [master]
+    branches: [ master ]
   schedule:
     - cron: '0 4 * * 1'
 
@@ -58,3 +58,9 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
+
+      - name: Archive sarif files
+        uses: actions/upload-artifact@v2
+        with:
+          name: Sarif file from codeQL scan
+          path: /home/runner/work/fishbone/results/java-builtin.sarif
