@@ -31,8 +31,8 @@ public class Fish {
    */
   public void generateRandomDescription() {
     if(1==1)
-      f();
-      g();	// Alert
+        f();
+        g(); // Alert
   }
 
   public void f() {
