@@ -17,4 +17,18 @@ public class FishRepository {
     System.out.println(langDefault);
     return Collections.singletonList(Fish.builder().build());
   }
+
+  /**
+   * Test for codeQL to verify if the UseBraces.ql identifies the missing braces
+   */
+  public void enforceCodeQL_Warning() {
+    if(1==1)
+        f();
+        g(); // Alert
+  }
+  public void f() {
+  }
+
+  public void g() {
+  }
 }

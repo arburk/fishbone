@@ -64,3 +64,4 @@ jobs:
         with:
           name: Sarif file from codeQL scan
           path: /home/runner/work/fishbone/results/java-builtin.sarif
+          retention-days: 5
