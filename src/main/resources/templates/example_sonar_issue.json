@@ -10,8 +10,8 @@
       "textRange": {
         "startLine": 26,
         "endLine": 26,
-        "startColumn": 9,
-        "endColumn": 13
+        "startColumn": 8,
+        "endColumn": 12
       }
     },
     "effortMinutes": 1,
@@ -22,8 +22,8 @@
         "textRange": {
           "startLine": 27,
           "endLine": 27,
-          "startColumn": 9,
-          "endColumn": 13
+          "startColumn": 8,
+          "endColumn": 12
         }
       },
       {
@@ -32,8 +32,8 @@
         "textRange": {
           "startLine": 25,
           "endLine": 25,
-          "startColumn": 5,
-          "endColumn": 13
+          "startColumn": 4,
+          "endColumn": 12
         }
       }
     ]
