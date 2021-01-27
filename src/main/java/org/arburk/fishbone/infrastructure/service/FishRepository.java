@@ -22,9 +22,10 @@ public class FishRepository {
    * Test for codeQL to verify if the UseBraces.ql identifies the missing braces
    */
   public void enforceCodeQL_Warning() {
-    if(1==1)
-        f();
-        g(); // Alert
+    if(1==1) {
+      f();
+    }
+    g(); // Alert
   }
   public void f() {
   }
