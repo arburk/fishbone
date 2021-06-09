@@ -3,4 +3,4 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=arburk_fishbone&metric=alert_status)](https://sonarcloud.io/dashboard?id=arburk_fishbone)
 
 # Fishbone
-Experimental Backend for FishApp
+Experimental repo to test misc features
